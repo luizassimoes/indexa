@@ -8,10 +8,10 @@ describe('SeparadorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SeparadorComponent ]
+      imports: [SeparadorComponent]
     })
     .compileComponents();
-
+    
     fixture = TestBed.createComponent(SeparadorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

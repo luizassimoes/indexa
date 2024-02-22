@@ -1,18 +1,14 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contato',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './contato.component.html',
-  styleUrls: ['./contato.component.css']
+  styleUrl: './contato.component.css'
 })
-export class ContatoComponent implements OnInit {
-
+export class ContatoComponent {
   @Input() nome: string = ''
   @Input() telefone: string = ''
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

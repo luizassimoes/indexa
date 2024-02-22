@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-separador',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './separador.component.html',
-  styleUrls: ['./separador.component.css']
+  styleUrl: './separador.component.css'
 })
-export class SeparadorComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+export class SeparadorComponent {
 
 }
