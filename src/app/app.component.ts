@@ -40,7 +40,8 @@ export class AppComponent {
       return this.contatos
     }
     return this.contatos.filter(contato => {
-      return contato.nome.toLowerCase().includes(this.filtroPorTexto.toLowerCase())
+      return contato.nome.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "")
+      .includes(this.filtroPorTexto.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ""))
     })
   }
 
@@ -50,3 +51,9 @@ export class AppComponent {
     } )
   }
 }
+
+
+// SUGESTÃO DADA: // Remove os acentos de uma string
+//  private removerAcentos(texto: string): string {
+//   return texto.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+// }
