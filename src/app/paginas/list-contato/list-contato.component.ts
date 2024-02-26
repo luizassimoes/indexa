@@ -1,10 +1,11 @@
-import { CabecalhoComponent } from '../../componentes/cabecalho/cabecalho.component';
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { CabecalhoComponent } from '../../componentes/cabecalho/cabecalho.component';
 import { ContainerComponent } from '../../componentes/container/container.component';
 import { SeparadorComponent } from '../../componentes/separador/separador.component';
 import { ContatoComponent } from '../../componentes/contato/contato.component';
-import { FormsModule } from '@angular/forms';
 import { FormularioContatoComponent } from '../form-contato/form-contato.component';
 
 import agenda from '../../agenda.json'
@@ -25,7 +26,8 @@ interface Contato {
     SeparadorComponent,
     ContatoComponent,
     FormularioContatoComponent,
-    FormsModule
+    FormsModule,
+    RouterLink
   ],
   templateUrl: './list-contato.component.html',
   styleUrl: './list-contato.component.css'

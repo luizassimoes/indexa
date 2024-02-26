@@ -163,3 +163,18 @@ input:focus {
   color: red;
   margin-bottom: 12px;
 }
+
+.voltar {
+  font-family: 'Montserrat';
+  font-size: 16px;
+  color: #0D6EFD;
+  padding: 6px;
+}
+
+.voltar-botao {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
